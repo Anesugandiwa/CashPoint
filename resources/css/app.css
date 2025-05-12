@@ -1,0 +1,53 @@
+.InertiaLink{
+    text-decoration: none !important;
+    color: unset;
+}
+.v-btn{
+    text-transform: unset !important;
+}
+.glass {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-radius: 10px !important;
+    box-shadow: 8px 10px 30px rgba(0, 100, 0, 0.1) !important;
+    backdrop-filter: blur(0px) !important;
+    -webkit-backdrop-filter: blur(0px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.64) !important;
+}
+
+.glass-border {
+    border-radius: 10px !important;
+    border: 1px solid rgba(255, 255, 255, 0.64) !important;
+}
+
+.glass-shadow {
+    box-shadow: 8px 10px 30px rgba(0, 100, 0, 0.1) !important;
+    backdrop-filter: blur(0px) !important;
+    -webkit-backdrop-filter: blur(0px) !important;
+}
+
+.glass-shadow-lg {
+    box-shadow: 8px 10px 30px rgba(23, 102, 175, 0.5) !important;
+    backdrop-filter: blur(0px) !important;
+    -webkit-backdrop-filter: blur(0px) !important;
+}
+.userbottom {
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+}
+
+.grow{
+    transition: ease-in 0.3s;
+}
+
+.grow:hover{
+    scale: 1.03;
+}
+
+
+body,
+html {
+    --font-sans:
+        'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
