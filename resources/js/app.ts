@@ -8,6 +8,8 @@ import { createApp, h } from 'vue';
 import { ZiggyVue } from 'ziggy-js';
 import { initializeTheme } from './composables/useAppearance';
 import vuetify from './plugins/vuetify';
+import VueSweetalert2 from 'vue-sweetalert2';
+import 'sweetalert2/dist/sweetalert2.min.css';
 
 
 
@@ -48,7 +50,7 @@ createInertiaApp({
             .use(vuetify)
             .component('InertiaLink', Link)
             .component('Head', Head)
-            
+            .use(VueSweetalert2,options)
             .mount(el);
     },
     progress: {

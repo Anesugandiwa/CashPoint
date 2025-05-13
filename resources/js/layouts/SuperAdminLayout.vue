@@ -13,7 +13,7 @@ const menues = ref([
     },
     {
         name: "User Management",
-        path: '',
+        path: route('manage_staff'),
         icon: "mdi-account-group",
         id: 2,
     }, 
@@ -25,7 +25,7 @@ const menues = ref([
     },
     {
         name: "Loan Management",
-        path: '',
+        path: route('manage_loan'),
         icon:"mdi-cash-multiple",
         id: 3,
     },
