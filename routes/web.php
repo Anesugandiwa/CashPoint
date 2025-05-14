@@ -10,16 +10,14 @@ Route::get('/', function () {
 
 Route::middleware(['auth', 'verified'])->group(function() {
     // Route::get('/Dashboard', [PagesController::class, 'index'])->name('dashboard');
-    Route::get('/dashboard', [PagesController::class, 'dash'])->name('dash');
 
-    // super Admin Routes
-Route::get('/user', [UserController::class, 'index'])->name('manage_staff');
-Route::get('/loanManagement', [UserController::class, 'loan'])->name('manage_loan');
-Route::get('/loanForm', [UserController::class, 'form'])->name('loan');
 
 });
 
 
 
+
 require __DIR__.'/settings.php';
 require __DIR__.'/auth.php';
+require __DIR__.'/customer.php';
+require __DIR__.'/admin.php';

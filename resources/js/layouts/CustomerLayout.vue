@@ -4,61 +4,50 @@ import { router } from '@inertiajs/vue3';
 
 const drawer = ref(null)
 
-const menues = ref([
+const menues =([
     {
         name: "Dashboard",
-       
-        icon: "mdi-view-dashboard",
-        id: 1,
+        path: route(''),
+        icon:"mdi-view-dashboard",
+        id:1,
     },
     {
-        name: "User Management",
-        path: route('manage_staff'),
-        icon: "mdi-account-group",
-        id: 2,
-    }, 
-    {
-        name: "Asset Management",
-        path: route('asset_index'),
-        icon:"mdi-package-variant-closed",
-        id: 3,
+        name:"My Assets",
+        path: route(''),
+        icon: "mdi-package-variant-closed",
+        id:2,
     },
     {
-        name: "Loan Management",
-        path: route('manage_loan'),
-        icon:"mdi-cash-multiple",
-        id: 3,
+        name: "My Loans",
+        path: route(''),
+        icon: "mdi-wallet",
+        id:3,
     },
     {
-        name: "Auction Management",
-        path:'',
-        icon: "mdi-gavel",
+        name: "Transaction",
+        path: route(''),
+        icon:"mdi-swap-horizontal",
         id: 4,
     },
     {
-        name: "Support Tickets",
-        path: '',
-        icon: "mdi-headset",
+        name: "Auctions",
+        path: route(''),
+        icon: "mdi-gavel",
         id: 5,
     },
     {
-        name: "Reports $ Analytics",
-      
-        icon: "mdi-chart-box",
-        id: 5,
+        name:"Support",
+        path: route(''),
+        icon: "mdi-help-circle",
+        id:6,
     },
     {
-        name: "System Settings",
+        name:"Settings",
+        path: route(''),
         icon: "mdi-cog",
-        id: 6,
+        id:7,
     },
-    {
-        name: "Audit Logs",
-        icon: "mdi-history",
-        id: 7,
-    },
-]);
-
+])
 function logout() {
     router.post('/logout', {}, {
         onSuccess: () => {
@@ -67,11 +56,8 @@ function logout() {
     });
 }
 </script>
-
-
-
 <template>
-    <v-app id="inspire">
+     <v-app id="inspire">
         <v-navigation-drawer v-model="drawer">
             <v-list density="compact">
                 <div class="mb-1 mx-1  d-flex">
@@ -88,7 +74,7 @@ function logout() {
                    </div>
                 </div>
                 <v-divider />
-                <v-list-subheader class="my-3"> Admin Portal </v-list-subheader>
+                <v-list-subheader class="my-3"> User Dashboard </v-list-subheader>
 
                 <!--list-->
 
@@ -115,7 +101,7 @@ function logout() {
                                 <h4
                                     class="ml-1 d-flex align-center font-weight-semibold"
                                 >
-                                    <!-- {{ $page.props.auth.user.name }} -->
+                                    {{ $page.props.auth.user.name }}
                                 </h4>
                             </div>
                             <div>
@@ -135,7 +121,7 @@ function logout() {
 
         <v-app-bar>
             <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-            <v-app-bar-title>Application</v-app-bar-title>
+            <v-app-bar-title>Design Media Pawn System</v-app-bar-title>
             <v-spacer/>
 
             <v-btn :href="route('home')">
@@ -149,4 +135,5 @@ function logout() {
            </v-container>
         </v-main>
     </v-app>
+
 </template>
