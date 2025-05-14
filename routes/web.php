@@ -3,14 +3,21 @@
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\UserController;
 Route::get('/', function () {
-    return Inertia::render('Dashboard');
+    return Inertia::render('Welcome');
 })->name('home');
 
-// Route::get('dashboard', function () {
-//     return Inertia::render('Dashboard');
-// })->middleware(['auth', 'verified'])->name('dashboard');
-Route::get('/Dashboard', [PagesController::class, 'index'])->name('dasboard');
-Route::get('/dashboard', [PagesController::class, 'dash'])->name('dash');
+Route::middleware(['auth', 'verified'])->group(function() {
+    // Route::get('/Dashboard', [PagesController::class, 'index'])->name('dashboard');
+
+
+});
+
+
+
+
 require __DIR__.'/settings.php';
 require __DIR__.'/auth.php';
+require __DIR__.'/customer.php';
+require __DIR__.'/admin.php';

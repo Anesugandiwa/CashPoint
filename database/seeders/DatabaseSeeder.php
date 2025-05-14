@@ -20,7 +20,15 @@ class DatabaseSeeder extends Seeder
             'name' => 'Test User',
             'email' => 'test@example.com',
             'email_verified_at' =>now(),
+            'role' => 'admin',
             'password' => Hash::make('Pass@123'),
+        ]);
+        User::factory()->create([
+            'name' => 'Customer ',
+            'email' => 'customer@example.com',
+            'email_verified_at' =>now(),
+            'role' => 'customer',
+            'password' => Hash::make('gandiwaa'),
         ]);
     }
 }

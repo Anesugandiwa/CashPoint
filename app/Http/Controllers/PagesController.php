@@ -13,4 +13,8 @@ class PagesController extends Controller
     public function dash(){
         return inertia('SuperAdmin/dashboard');
     }
+
+    public function asset(){
+        return inertia('SuperAdmin/Asset');
+    }
 }
